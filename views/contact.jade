@@ -1,0 +1,114 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css')
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
+    title Emiliano Calderón - CV
+  body
+    header
+      div
+        h2(style="color: white;") Curriculum Vitae
+      div.list
+        ul
+          li 
+            a(title="Home" href="/en")
+              i.bi.bi-house-door 
+          li
+            a(title="Contact" href='contact')
+              i.bi.bi-envelope
+          li
+            a(title="Instagram" href='https://www.instagram.com/emicalderon24/' target='_blank' rel='noopener noreferrer')
+              i.bi.bi-instagram
+          li
+            a(title="Español" href='/contacto')
+              i.bi.bi-globe2
+          li#switch-li
+            button#switch(title="Dark Mode")
+              i.bi.bi-moon
+          li#sun-li(style="display: none;")
+            button#sun(style="display: none;" title="Light Mode")
+              i.bi.bi-sun
+      input#cerrar(style="display: none;" type="checkbox", name="cerrar")
+      label.cerrar-l(for="cerrar")
+        i.bi.bi-list 
+      input#abrir(style="display: none;" type="checkbox", name="abrir")
+      label.abrir-l(for="cerrar")
+        i.bi.bi-x
+      .menu-mobile 
+        br
+        br
+        div(style="text-align: center; list-style: none;")
+          ul
+          li 
+            a(style="text-decoration: none;" href="/en")
+              i.bi.bi-house-door  Home
+          br
+          li
+            a(style="text-decoration: none;" href='contact')
+              i.bi.bi-envelope  Contact
+          br
+          li
+            a(style="text-decoration: none;" href='https://www.instagram.com/emicalderon24/' target='_blank' rel='noopener noreferrer')
+              i.bi.bi-instagram  Instagram
+          br
+          li
+            a(style="text-decoration: none;" href='/contacto')
+              i.bi.bi-globe2  Español
+          br
+          li#switch-lim
+            a#switchm(title="Dark Mode")
+              i.bi.bi-moon  Dark Mode
+          li#sun-lim(style="display: none;")
+            a#sunm(style="display: none;" title="Light Mode")
+              i.bi.bi-sun  Light Mode
+    br
+    br
+    main
+      div(style="text-align: center;")
+        h2 Send me a message
+      br
+      br
+      div.form
+        form(action="/enviar/en" method="post")
+          span Name
+          br
+          input#nombre(type="text", name="nombre" required='')
+          br
+          br
+          span E-mail
+          br
+          input#email(type="email", name="email" required='')
+          br
+          br
+          span Telephone (optional) 
+          br
+          input#telefono(type="text", name="telefono")
+          br
+          br
+          span Message 
+          br
+          textarea#mensaje(onkeydown="pulsar(event)" name="mensaje" required='') 
+          br
+          div.error-msj
+            span(style=`color: ${color};`)= msj
+          br
+          div(style="text-align: center;")
+            button(type="submit") Send  
+    script(src="/javascripts/dark.js")
+    script(src="/javascripts/scroll.js")
+    script.
+      function pulsar(e) {
+        if (e.which === 13 && !e.shiftKey) {
+        e.preventDefault();
+        return false;
+        }
+      }
+    br
+    br
+    footer
+      div(style="text-align: center")
+        span Emiliano Oscar Calderón - Curriculum Vitae

@@ -1,0 +1,267 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css')
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
+    title Emiliano Calderón - CV
+  body
+    header
+      div.logo
+        h2(style="color: white;") Curriculum Vitae
+      div.list
+        ul
+          li 
+            a(title="Inicio" href="/")
+              i.bi.bi-house-door 
+          li
+            a(title="Contacto" href='contacto')
+              i.bi.bi-envelope
+          li
+            a(title="Instagram" href='https://www.instagram.com/emicalderon24/' target='_blank' rel='noopener noreferrer')
+              i.bi.bi-instagram
+          li
+            a(title="English" href='en')
+              i.bi.bi-globe2
+          li#switch-li
+            button#switch(title="Modo Oscuro")
+              i.bi.bi-moon
+          li#sun-li(style="display: none;" title="Modo Claro")
+            button#sun(style="display: none;")
+              i.bi.bi-sun
+      input#cerrar(style="display: none;" type="checkbox", name="cerrar")
+      label.cerrar-l(for="cerrar")
+        i.bi.bi-list 
+      input#abrir(style="display: none;" type="checkbox", name="abrir")
+      label.abrir-l(for="cerrar")
+        i.bi.bi-x
+      .menu-mobile 
+        br
+        br
+        div(style="text-align: center; list-style: none;")
+          ul
+          li 
+            a(style="text-decoration: none;" href="/")
+              i.bi.bi-house-door  Inicio
+          br
+          li
+            a(style="text-decoration: none;" href='contacto')
+              i.bi.bi-envelope  Contacto
+          br
+          li
+            a(style="text-decoration: none;" href='https://www.instagram.com/emicalderon24/' target='_blank' rel='noopener noreferrer')
+              i.bi.bi-instagram  Instagram
+          br
+          li
+            a(style="text-decoration: none;" href='/en')
+              i.bi.bi-globe2  English
+          br
+          li#switch-lim
+            a#switchm(title="Modo Oscuro")
+              i.bi.bi-moon  Modo Oscuro
+          li#sun-lim(style="display: none;")
+            a#sunm(style="display: none;" title="Modo Claro")
+              i.bi.bi-sun  Modo Claro
+    br
+    br
+    main
+      div(style="text-align: center")
+        div.perfil
+          img(src='/images/perfil.jpeg' width="200px" alt='')
+        div
+          h1 Emiliano Calderón
+      div(style="text-align: center")
+        span Desarrollador Web Full Stack
+        br
+        br
+        a.vers(href='descargar') Versión Impresa
+      br
+      br
+      br
+      div
+        h1 Contacto
+        ul
+          li Soy Emiliano Oscar Calderón
+          li Nací en Argentina, el 19 de Abril de 2002
+          li Vivo en Paraná, Entre Ríos
+          li emicalderon2004@gmail.com
+          li +54 343 460-6845
+      br
+      br
+      div.sobre-mi
+        h1 Sobre Mi
+        p
+          | A mis 17 años comencé a desarrollar páginas web de forma autodidacta.
+        p
+          | Me encuentro realizando la parte avanzada de un curso de Desarrollador Web Full Stack en la UTN-BA.
+        p
+          | En mis tiempos libres me dedico a hacer proyectos personales o como Freelancer.
+        p
+          | Estoy más orientado al Front End, pero también hago Back End.
+        p
+          | Disfruto desarrollar proyectos y aprender cosas nuevas para mejorar mis habilidades.
+      br
+      br
+      div
+        h1 Educación
+        ul
+          li 
+            | 2019, Nivel Secundario como Bachiller con orientación en Administración y Economía, en 
+            a(href="https://sites.google.com/view/escueladelcentenario/pagina-principal" target='_blank' rel='noopener noreferrer') Escuela Secundaria Nº 16 del Centenario
+          li 
+            | 2021, Programador Web Inicial - Front End Developer, en 
+            a(href='https://sceu.frba.utn.edu.ar/e-learning/' target='_blank' rel='noopener noreferrer') UTN-BA
+          li(style='list-style: none;') (Código Único Certificado: 60081)
+          li
+            | Actualmente, Programador Web Avanzado - Back End Developer, en 
+            a(href='https://sceu.frba.utn.edu.ar/e-learning/' target='_blank' rel='noopener noreferrer') UTN-BA
+      br
+      br
+      div
+        h1 Habilidades
+        ul
+          li Programación Web Front End
+          li Programación Web Back End
+          li Diseño y Maquetación Web
+          li Idiomas inglés y portugués
+          li Autodidacta
+          li Deportista
+          li Creación de Contenidos Digitales
+      br
+      br
+      div
+        h1 Tecnologías que uso
+        br
+        div.tecno
+          div(style='display: flex; justify-content: space-between; text-align: center;') 
+            div
+              div
+                img(src='/images/html5.svg' title='HTML' width='60px' alt='HTML5 - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+            div
+              div
+                img(src='/images/css.svg' title='CSS' width='60px' alt='CSS - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+            div
+              div
+                img(src='/images/javascript.svg' title='JavaScript' width='60px' alt='JavaScript - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-half
+            div
+              div
+                img(src='/images/node.svg' title='NodeJS' width='60px' alt='NodeJS - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star
+            div
+              div
+                img(src='/images/bootstrap.svg' title='BootStrap' width='60px' alt='Bootstrap - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+          div(style='display: flex; justify-content: space-between; text-align: center;')
+            div
+              div
+                img(src='/images/php.svg' title='PHP' width='60px' alt='PHP - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star
+            div
+              div
+                img(src='/images/mysql.svg' title='MySQL' width='60px' alt='MySQL - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+            div
+              div
+                img(src='/images/git.svg' title='GIT' width='60px' alt='GIT - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-half
+            div
+              div
+                img(src='/images/github.svg' title='GITHub' width='60px' alt='GITHub - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-half
+            div
+              div
+                img(src='/images/jade.svg' title='GITHub' width='60px' alt='GITHub - Emiliano Calderon')
+              div
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-fill
+                i.bi.bi-star-half
+      br
+      br
+      div
+        h1 Intereses
+        ul
+          li
+            b Deportista
+            | , hago Remo con la Selección Nacional Argentina.
+          li
+            b Remoto
+            | , me gustaría trabajar a distancia por mi deporte.
+          li
+            b Autodidacta
+            | , me gusta aprender cosas nuevas.
+          li
+            b Equipo
+            | , suelo trabajar solo, pero un buen equipo siempre me motivará más.
+      br
+      br
+      div
+        h1 Proyectos y Experiencias
+        br
+        div.proyectos
+          a(href='https://pelvison.herokuapp.com/' target='_blank' rel='noopener noreferrer')
+            div.exp
+              div.imgs
+                img(src='/images/pelvison.jpg' width='70px' alt='Pelvis On')
+              div.ps
+                h2(style="color: rgb(68, 68, 68);") Pelvis On (2021)
+                p Desarrollo total del Front End y el Back End del sitio Pelvis On.
+    script(src="javascripts/dark.js")
+    script(src="/javascripts/scroll.js")
+    br
+    br
+    footer
+      div(style="text-align: center")
+        span Emiliano Oscar Calderón - Curriculum Vitae
